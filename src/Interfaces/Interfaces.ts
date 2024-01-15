@@ -23,3 +23,9 @@ export interface IExercise {
   id: number;
   name: string;
 }
+
+export interface IUsers {
+  id: number;
+  name: string;
+  imgPath: string;
+}
