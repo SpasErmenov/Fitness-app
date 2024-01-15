@@ -1,6 +1,6 @@
 import FeedbackCard from "../../../components/UI/FeedbackCard/FeedbackCard";
 import styles from "./FeedbackBlock.module.css";
-import { usersFeedbackBlockPicture } from "../../../assets/UsersFeedbackBlockPictures/usersFeedbackBlockPictures";
+import { usersFeedbackBlockPicture } from "../../../assets/usersFeedbackBlockPictures/usersFeedbackBlockPictures";
 const FeedbackBlock = () => {
   return (
     <div className={styles.feedbackBlock}>
