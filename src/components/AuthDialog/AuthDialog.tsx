@@ -61,20 +61,20 @@ const AuthDialog = (props: IAuthDialogProps) => {
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <div className={style.dialogHeader}>
+      <div className={style.DialogHeader}>
         <DialogTitle>{formTitles.title}</DialogTitle>
 
         <IconButton onClick={onClose} aria-label="close">
           <CloseIcon />
         </IconButton>
       </div>
-      <hr className={style.separator} />
-      <div className={style.dialogSubHeader}>
+      <hr className={style.Separator} />
+      <div className={style.DialogSubHeader}>
         <Button variant="text" size="small" onClick={handleClick}>
           {formTitles.buttonName}
         </Button>
       </div>
-      <hr className={style.separator} />
+      <hr className={style.Separator} />
       <DialogContent sx={{ padding: "0 24px", width: "400px" }}>
         {authMode === AuthMode.Login && (
           <LoginForm
