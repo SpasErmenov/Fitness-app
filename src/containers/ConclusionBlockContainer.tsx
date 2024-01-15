@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { authStore } from "../stores/AuthStore/stores";
 import { observer } from "mobx-react-lite";
 import ConclusionBlock from "../routes/Landing/ConclusionBlock/ConclusionBlock";
-import { AuthMode } from "../Enums/Enums";
+import { AuthMode } from "../enums/enums";
 
 const ConclusionBlockContainer = observer(() => {
 

@@ -13,7 +13,7 @@ import style from "./AuthDialog.module.css";
 import LoginForm from "../Forms/LoginForm/LoginForm";
 import RegisterForm from "../Forms/RegisterForm/RegisterForm";
 import { IAlert } from "../../Interfaces/Interfaces";
-import { AuthMode } from "../../Enums/Enums";
+import { AuthMode } from "../../enums/enums";
 
 interface IAuthDialogProps {
   authMode: AuthMode | null;

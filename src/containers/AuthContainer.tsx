@@ -4,7 +4,7 @@ import { authStore } from "../stores/AuthStore/stores";
 import { useCallback } from "react";
 import { IAlert } from "../Interfaces/Interfaces";
 import { useNavigate } from "react-router-dom";
-import { AuthMode } from "../Enums/Enums";
+import { AuthMode } from "../enums/enums";
 
 const AuthContainer = observer(() => {
   const navigate = useNavigate();

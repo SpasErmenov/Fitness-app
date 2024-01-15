@@ -5,7 +5,7 @@ import {
 } from "../../constants/api-endpoints.constants";
 import { IAlert, ILogin, IRegister } from "../../Interfaces/Interfaces";
 import RestService from "./rest.service";
-import { AuthMode } from "../../Enums/Enums";
+import { AuthMode } from "../../enums/enums";
 
 export class AuthStore {
   public authMode: AuthMode | null;
