@@ -3,7 +3,7 @@ import {
   MAX_USERNAME_LENGTH,
   MIN_PASSWORD_LENGTH,
   MIN_USERNAME_LENGTH,
-} from "../../../constants";
+} from "../../validations/validation.constants";
 
 export const usernameValidationError = (username: string): boolean => {
   return (
