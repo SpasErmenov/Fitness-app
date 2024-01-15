@@ -1,5 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
-import { SERVER_URL_EXERCISES_FETCH_ALL } from "../../../constants";
+import { EXERCISES_FETCH_ALL } from "../../constants/api-endpoints.constants";
 import { IExercise } from "../../Interfaces/Interfaces";
 import RestService from "../AuthStore/rest.service";
 
@@ -23,7 +23,7 @@ export class ExercisesStore {
   public async getExercises(): Promise<void> {
     try {
       const result = await RestService.get<IExercise[]>(
-        SERVER_URL_EXERCISES_FETCH_ALL
+        EXERCISES_FETCH_ALL
       );
 
       this.setExercisesList(result.data);

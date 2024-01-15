@@ -1,8 +1,8 @@
 import { makeObservable, observable, action } from "mobx";
 import {
-  SERVER_URL_USER_LOGIN,
-  SERVER_URL_USER_REGISTER,
-} from "../../../constants";
+  USER_LOGIN,
+  USER_REGISTER,
+} from "../../constants/api-endpoints.constants";
 import { IAlert, ILogin, IRegister } from "../../Interfaces/Interfaces";
 import RestService from "./rest.service";
 import { AuthMode } from "../../Enums/Enums";
@@ -48,7 +48,7 @@ export class AuthStore {
         password,
       };
       const result = await RestService.post<ILogin>(
-        SERVER_URL_USER_LOGIN,
+        USER_LOGIN,
         data
       );
 
@@ -79,7 +79,7 @@ export class AuthStore {
         password,
       };
       const result = await RestService.post<IRegister>(
-        SERVER_URL_USER_REGISTER,
+        USER_REGISTER,
         data
       );
       if (result?.data.registered) {
