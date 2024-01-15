@@ -1,4 +1,4 @@
-import { IResponse } from "../../Interfaces/Interfaces";
+import { IResponse } from "../../interfaces/interfaces";
 
 class RestService {
   static async get<T>(url: string, params?: object): Promise<IResponse<T>> {

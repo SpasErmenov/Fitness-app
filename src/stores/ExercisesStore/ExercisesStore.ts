@@ -1,6 +1,6 @@
 import { action, makeObservable, observable } from "mobx";
 import { EXERCISES_FETCH_ALL } from "../../constants/api-endpoints.constants";
-import { IExercise } from "../../Interfaces/Interfaces";
+import { IExercise } from "../../interfaces/interfaces";
 import RestService from "../AuthStore/rest.service";
 
 export class ExercisesStore {

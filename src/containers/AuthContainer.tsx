@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 import AuthDialog from "../components/AuthDialog/AuthDialog";
 import { authStore } from "../stores/AuthStore/stores";
 import { useCallback } from "react";
-import { IAlert } from "../Interfaces/Interfaces";
+import { IAlert } from "../interfaces/interfaces";
 import { useNavigate } from "react-router-dom";
 import { AuthMode } from "../enums/enums";
 

@@ -3,7 +3,7 @@ import {
   USER_LOGIN,
   USER_REGISTER,
 } from "../../constants/api-endpoints.constants";
-import { IAlert, ILogin, IRegister } from "../../Interfaces/Interfaces";
+import { IAlert, ILogin, IRegister } from "../../interfaces/interfaces";
 import RestService from "./rest.service";
 import { AuthMode } from "../../enums/enums";
 
