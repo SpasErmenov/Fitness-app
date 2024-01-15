@@ -1,0 +1,36 @@
+.footer {
+  background-color: #1f2629;
+  color: #f3f3f3;
+  font-family: "Inter", sans-serif;
+  padding-top: 80px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 50px;
+}
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto auto;
+  color: #cccccc;
+}
+.headers {
+  color: #ffffff;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+.copyrightText {
+  color: #808080;
+  padding-top: 80px;
+  text-align: center;
+}
+@media (max-width: 950px) {
+  .footer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+}

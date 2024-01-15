@@ -1,0 +1,17 @@
+.dialogHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.dialogSubHeader {
+    margin-left: auto;
+    padding-right: 16px;
+
+}
+
+.separator {
+    margin: 0;
+    
+}
