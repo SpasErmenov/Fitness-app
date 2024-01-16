@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { observer } from "mobx-react-lite";
-import { authStore } from "../stores/AuthStore/stores";
+import { authStore } from "../stores/stores";
 import ConclusionBlock from "../routes/Landing/ConclusionBlock/ConclusionBlock";
 import { AuthMode } from "../enums/enums";
 

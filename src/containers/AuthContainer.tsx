@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { IAlert } from "../interfaces/interfaces";
 import { AuthMode } from "../enums/enums";
-import { authStore } from "../stores/AuthStore/stores";
+import { authStore } from "../stores/stores";
 import AuthDialog from "../components/AuthDialog/AuthDialog";
 import { HOME_PAGE } from "@/routes/paths.constants";
 
