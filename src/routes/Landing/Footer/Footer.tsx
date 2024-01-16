@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyrightText}>
-        <p>Copyright &copy; 2023 Spas Ermenov. All Rights Reserved</p>
+        <p>Copyright &copy; 2024 Spas Ermenov. All Rights Reserved</p>
       </div>
     </div>
   );
