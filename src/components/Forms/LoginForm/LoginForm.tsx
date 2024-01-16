@@ -1,5 +1,5 @@
 import { Button, DialogActions, TextField } from "@mui/material";
-import { useCallback, KeyboardEvent, useState, useMemo } from "react";
+import { useCallback, KeyboardEvent, useState, useMemo, ChangeEvent } from "react";
 import {
   passwordValidationError,
   passwordValidationHelper,
@@ -14,8 +14,8 @@ interface ILoginFormProps {
 const LoginForm = (props: ILoginFormProps) => {
   const { onSubmit } = props;
 
-  const [username, setUsername] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const isFormInvalid = useMemo(() => {
     const isUsernameInvalid =
@@ -37,12 +37,12 @@ const LoginForm = (props: ILoginFormProps) => {
   );
 
   const handleUsernameChange = useCallback(
-    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setUsername(e.target.value);
   },[setUsername]);
 
   const handlePasswordChange = useCallback(
-    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setPassword(e.target.value);
   },[setPassword]);
   
