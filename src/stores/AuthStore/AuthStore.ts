@@ -22,7 +22,7 @@ export class AuthStore {
       session: observable,
 
       setAuthMode: action,
-      setSessionToken: action,
+      setSession: action,
     });
 
     this.session = localStorage.getItem("session") || null;
@@ -32,13 +32,13 @@ export class AuthStore {
     this.authMode = authMode;
   }
 
-  public setSessionToken(token: Maybe<string>) {
+  public setSession(token: Maybe<string>) {
     this.session = token;
   }
 
   public logout() {
     localStorage.removeItem("session");
-    this.setSessionToken(null);
+    this.setSession(null);
   }
 
   public async login(
@@ -54,7 +54,7 @@ export class AuthStore {
 
       if (result?.data.token) {
         localStorage.setItem("session", result.data.token);
-        this.setSessionToken(result.data.token);
+        this.setSession(result.data.token);
         return { severity: "success", message: result.data.message };
       } else {
         return { severity: "error", message: result.data.message };
