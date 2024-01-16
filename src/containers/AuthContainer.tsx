@@ -5,6 +5,7 @@ import { IAlert } from "../interfaces/interfaces";
 import { AuthMode } from "../enums/enums";
 import { authStore } from "../stores/AuthStore/stores";
 import AuthDialog from "../components/AuthDialog/AuthDialog";
+import { HOME_PAGE } from "@/routes/paths.constants";
 
 const AuthContainer = observer(() => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const AuthContainer = observer(() => {
               message: result.message,
             };
             if (alert.severity === "success") {
-              navigate("/home");
+              navigate(HOME_PAGE);
               handleClose();
             }
             return alert;
