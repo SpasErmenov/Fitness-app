@@ -4,13 +4,7 @@ interface IConclusionBlockProps {
   onJoinNowClick: () => void;
 }
 
-const ConclusionBlock = (props: IConclusionBlockProps) => {
-  const { onJoinNowClick } = props;
-
-  const handleClick = () => {
-    onJoinNowClick();
-  };
-
+export const ConclusionBlock = (props: IConclusionBlockProps) => {
   return (
     <div className={styles.conclusionBlock}>
       <div className={styles.text}>
@@ -23,11 +17,10 @@ const ConclusionBlock = (props: IConclusionBlockProps) => {
           We have all feautures you will need to track your workouts. Keep track
           of your set, reps, exercises, progression and many more.
         </p>
-        <label onClick={handleClick}>
+        <label onClick={props.onJoinNowClick}>
           <u>Join now to find out.</u>
         </label>
       </div>
     </div>
   );
 };
-export default ConclusionBlock;
