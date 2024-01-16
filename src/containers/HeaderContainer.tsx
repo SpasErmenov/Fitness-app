@@ -6,8 +6,8 @@ import { AuthMode } from "../enums/enums";
 import Header from "../components/Header/Header";
 
 const HeaderContainer = observer(() => {
-  const navigate = useNavigate();
   const { session } = authStore;
+  const navigate = useNavigate();
 
   const handleLoginClick = useCallback(() => {
     authStore.setAuthMode(AuthMode.Login);
