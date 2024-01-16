@@ -19,13 +19,12 @@ interface IAuthDialogProps {
   authMode: Maybe<AuthMode>;
   open: boolean;
   onAuthModeChange: () => void;
-  handleOnClose: () => void;
+  onClose: () => void;
   onFormSubmit: (username: string, password: string) => Promise<Maybe<IAlert>>;
 }
 
 const AuthDialog = (props: IAuthDialogProps) => {
-  const { authMode, open, onAuthModeChange, handleOnClose, onFormSubmit } =
-    props;
+  const { authMode, open, onAuthModeChange, onClose, onFormSubmit } = props;
 
   const [alertObj, setAlertObj] = useState<Maybe<IAlert>>(null);
 
@@ -61,11 +60,11 @@ const AuthDialog = (props: IAuthDialogProps) => {
   }, [authMode]);
 
   return (
-    <Dialog open={open} onClose={handleOnClose}>
+    <Dialog open={open} onClose={onClose}>
       <div className={style.DialogHeader}>
         <DialogTitle>{formTitles.title}</DialogTitle>
 
-        <IconButton onClick={handleOnClose} aria-label="close">
+        <IconButton onClick={onClose} aria-label="close">
           <CloseIcon />
         </IconButton>
       </div>

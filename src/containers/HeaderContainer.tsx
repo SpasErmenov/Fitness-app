@@ -1,9 +1,9 @@
 import { useCallback } from "react";
-import Header from "../components/Header/Header";
-import { authStore } from "../stores/AuthStore/stores";
-import { observer } from "mobx-react-lite";
-import { AuthMode } from "../enums/enums";
 import { useNavigate } from "react-router-dom";
+import { observer } from "mobx-react-lite";
+import { authStore } from "../stores/AuthStore/stores";
+import { AuthMode } from "../enums/enums";
+import Header from "../components/Header/Header";
 
 const HeaderContainer = observer(() => {
   const navigate = useNavigate();
@@ -26,15 +26,13 @@ const HeaderContainer = observer(() => {
   }, [navigate]);
 
   return (
-    <>
-      <Header
-        session={session}
-        onLoginClick={handleLoginClick}
-        onRegisterClick={handleRegisterClick}
-        onLogoutClick={handleLogoutClick}
-        onExercisesClick={handleExercisesClick}
-      />
-    </>
+    <Header
+      session={session}
+      onLoginClick={handleLoginClick}
+      onRegisterClick={handleRegisterClick}
+      onLogoutClick={handleLogoutClick}
+      onExercisesClick={handleExercisesClick}
+    />
   );
 });
 
