@@ -4,10 +4,10 @@ import { IExercise } from "../../interfaces/interfaces";
 import RestService from "../AuthStore/rest.service";
 
 export class ExercisesStore {
-  public exercise: Maybe<IExercise[]>;
+  public exercise: IExercise[];
 
   constructor() {
-    this.exercise = null;
+    this.exercise = [];
 
     makeObservable(this, {
       exercise: observable,
