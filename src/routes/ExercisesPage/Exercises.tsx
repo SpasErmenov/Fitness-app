@@ -1,9 +1,9 @@
 // TODO Component
-interface IExercises {
+interface IExercisesProps {
   exercises: Maybe<object>;
 }
 
-const Exercises = (props: IExercises) => {
+const Exercises = (props: IExercisesProps) => {
   const { exercises } = props;
 
   return (
