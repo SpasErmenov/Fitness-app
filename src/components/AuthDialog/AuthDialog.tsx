@@ -19,26 +19,27 @@ interface IAuthDialogProps {
   authMode: AuthMode | null;
   open: boolean;
   onAuthModeChange: () => void;
-  onClose: () => void;
-  onFormSubmit: (
-    username: string,
-    password: string
-  ) => Promise<IAlert | null>;
+  handleOnClose: () => void;
+  onFormSubmit: (username: string, password: string) => Promise<IAlert | null>;
 }
 
 const AuthDialog = (props: IAuthDialogProps) => {
-  const { authMode, open, onAuthModeChange, onClose, onFormSubmit } = props;
+  const { authMode, open, onAuthModeChange, handleOnClose, onFormSubmit } =
+    props;
 
   const [alertObj, setAlertObj] = useState<IAlert | null>(null);
-  
+
   const handleClick = useCallback(() => {
     onAuthModeChange();
   }, [onAuthModeChange]);
-  
-  const handleClickForSubmit = useCallback(async (username: string, password: string) => {
-    const alertError = await onFormSubmit(username, password);    
-    setAlertObj(alertError);    
-  }, [setAlertObj, onFormSubmit]);
+
+  const handleClickForSubmit = useCallback(
+    async (username: string, password: string) => {
+      const alertError = await onFormSubmit(username, password);
+      setAlertObj(alertError);
+    },
+    [setAlertObj, onFormSubmit],
+  );
 
   const handleCloseAlert = useCallback(() => {
     setAlertObj(null);
@@ -60,11 +61,11 @@ const AuthDialog = (props: IAuthDialogProps) => {
   }, [authMode]);
 
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog open={open} onClose={handleOnClose}>
       <div className={style.DialogHeader}>
         <DialogTitle>{formTitles.title}</DialogTitle>
 
-        <IconButton onClick={onClose} aria-label="close">
+        <IconButton onClick={handleOnClose} aria-label="close">
           <CloseIcon />
         </IconButton>
       </div>
@@ -84,13 +85,11 @@ const AuthDialog = (props: IAuthDialogProps) => {
           />
         )}
         {authMode === AuthMode.Register && (
-          <>
-            <RegisterForm
-              onSubmit={(username, password) =>
-                handleClickForSubmit(username, password)
-              }
-            />
-          </>
+          <RegisterForm
+            onSubmit={(username, password) =>
+              handleClickForSubmit(username, password)
+            }
+          />
         )}
       </DialogContent>
       <Snackbar
