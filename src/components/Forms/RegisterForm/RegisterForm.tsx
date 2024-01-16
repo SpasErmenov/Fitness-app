@@ -1,5 +1,5 @@
 import { Button, DialogActions, TextField } from "@mui/material";
-import { KeyboardEvent, useCallback, useMemo, useState } from "react";
+import { KeyboardEvent, useCallback, useMemo, useState, ChangeEvent } from "react";
 import {
   passwordRepeatValidationError,
   passwordRepeatValidationHelper,
@@ -48,17 +48,17 @@ const RegisterForm = (props: IRegisterFormProps) => {
   );
   
   const handleUsernameChange = useCallback(
-    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setUsername(e.target.value);
   },[setUsername]);
 
   const handlePasswordChange = useCallback(
-    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setPassword(e.target.value);
   },[setPassword]);
 
   const handlePasswordRepeatChange = useCallback(
-    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setPasswordRepeat(e.target.value);
   },[setPasswordRepeat]);
   
