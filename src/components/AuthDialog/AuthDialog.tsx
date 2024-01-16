@@ -24,15 +24,11 @@ interface IAuthDialogProps {
 }
 
 const AuthDialog = (props: IAuthDialogProps) => {
-  const { authMode, open, onAuthModeChange, onClose, onFormSubmit } = props;
+  const { authMode, open, onFormSubmit } = props;
 
   const [alertObj, setAlertObj] = useState<Maybe<IAlert>>(null);
 
-  const handleClick = useCallback(() => {
-    onAuthModeChange();
-  }, [onAuthModeChange]);
-
-  const handleClickForSubmit = useCallback(
+  const handleSubmit = useCallback(
     async (username: string, password: string) => {
       const alertError = await onFormSubmit(username, password);
       setAlertObj(alertError);
@@ -59,35 +55,27 @@ const AuthDialog = (props: IAuthDialogProps) => {
   }, [authMode]);
 
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog open={open} onClose={props.onClose}>
       <div className={style.DialogHeader}>
         <DialogTitle>{formTitles.title}</DialogTitle>
 
-        <IconButton onClick={onClose} aria-label="close">
+        <IconButton onClick={props.onClose} aria-label="close">
           <CloseIcon />
         </IconButton>
       </div>
       <hr className={style.Separator} />
       <div className={style.DialogSubHeader}>
-        <Button variant="text" size="small" onClick={handleClick}>
-          {formTitles.buttonName}
-        </Button>
+        <Button
+          variant="text"
+          size="small"
+          onClick={props.onAuthModeChange}
+        ></Button>
       </div>
       <hr className={style.Separator} />
       <DialogContent sx={{ padding: "0 24px", width: "400px" }}>
-        {authMode === AuthMode.Login && (
-          <LoginForm
-            onSubmit={(username, password) =>
-              handleClickForSubmit(username, password)
-            }
-          />
-        )}
+        {authMode === AuthMode.Login && <LoginForm onSubmit={handleSubmit} />}
         {authMode === AuthMode.Register && (
-          <RegisterForm
-            onSubmit={(username, password) =>
-              handleClickForSubmit(username, password)
-            }
-          />
+          <RegisterForm onSubmit={handleSubmit} />
         )}
       </DialogContent>
       <Snackbar
