@@ -15,7 +15,7 @@ interface IHeaderProps {
 }
 
 const Header = (props: IHeaderProps) => {
-  const { onLoginClick, onRegisterClick, onLogoutClick, onExercisesClick, session } = props;
+  const { session } = props;
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -33,18 +33,20 @@ const Header = (props: IHeaderProps) => {
             </Typography>
             {!session && (
               <>
-                <Button color="inherit" onClick={onRegisterClick}>
+                <Button color="inherit" onClick={props.onRegisterClick}>
                   Register
                 </Button>
-                <Button color="inherit" onClick={onLoginClick}>
+                <Button color="inherit" onClick={props.onLoginClick}>
                   Login
                 </Button>
               </>
             )}
             {session && (
               <>
-                <Button color="inherit" onClick={onExercisesClick}>Exercises</Button>
-                <AvatarMenu onLogoutClick={onLogoutClick}/>
+                <Button color="inherit" onClick={props.onExercisesClick}>
+                  Exercises
+                </Button>
+                <AvatarMenu onLogoutClick={props.onLogoutClick} />
               </>
             )}
           </Grid>
