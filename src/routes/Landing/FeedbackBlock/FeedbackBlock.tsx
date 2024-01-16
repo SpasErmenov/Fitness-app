@@ -1,7 +1,8 @@
 import FeedbackCard from "../../../components/UI/FeedbackCard/FeedbackCard";
 import styles from "./FeedbackBlock.module.css";
 import { usersFeedbackBlockPicture } from "../../../constants/users-feedback-block-pictures";
-const FeedbackBlock = () => {
+
+export const FeedbackBlock = () => {
   return (
     <div className={styles.feedbackBlock}>
       <div className={styles.headers}>
@@ -19,4 +20,3 @@ const FeedbackBlock = () => {
     </div>
   );
 };
-export default FeedbackBlock;
