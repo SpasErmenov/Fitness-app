@@ -6,7 +6,7 @@ import Landing from "./Landing/Landing";
 import CreateWorkout from "./CreateWorkout/CreateWorkout";
 import ExercisesPage from "./ExercisesPage/ExercisesPage";
 
-function Router() {
+export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -19,6 +19,4 @@ function Router() {
       </Routes>
     </BrowserRouter>
   );
-}
-
-export default Router;
+};
