@@ -45,17 +45,16 @@ const AuthDialog = (props: IAuthDialogProps) => {
   }, [setAlertObj]);
 
   const formTitles = useMemo(() => {
-    switch (authMode) {
-      case AuthMode.Login:
-        return {
-          title: AuthMode.Login,
-          buttonName: AuthMode.Register,
-        };
-      default:
-        return {
-          title: AuthMode.Register,
-          buttonName: AuthMode.Login,
-        };
+    if (authMode === AuthMode.Login) {
+      return {
+        title: AuthMode.Login,
+        buttonName: AuthMode.Register,
+      };
+    } else {
+      return {
+        title: AuthMode.Register,
+        buttonName: AuthMode.Login,
+      };
     }
   }, [authMode]);
 
