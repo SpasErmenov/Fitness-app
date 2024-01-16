@@ -16,18 +16,18 @@ import { AuthMode } from "../../enums/enums";
 import style from "./AuthDialog.module.css";
 
 interface IAuthDialogProps {
-  authMode: AuthMode | null;
+  authMode: Maybe<AuthMode>;
   open: boolean;
   onAuthModeChange: () => void;
   handleOnClose: () => void;
-  onFormSubmit: (username: string, password: string) => Promise<IAlert | null>;
+  onFormSubmit: (username: string, password: string) => Promise<Maybe<IAlert>>;
 }
 
 const AuthDialog = (props: IAuthDialogProps) => {
   const { authMode, open, onAuthModeChange, handleOnClose, onFormSubmit } =
     props;
 
-  const [alertObj, setAlertObj] = useState<IAlert | null>(null);
+  const [alertObj, setAlertObj] = useState<Maybe<IAlert>>(null);
 
   const handleClick = useCallback(() => {
     onAuthModeChange();

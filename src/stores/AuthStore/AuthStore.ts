@@ -8,9 +8,9 @@ import RestService from "./rest.service";
 import { AuthMode } from "../../enums/enums";
 
 export class AuthStore {
-  public authMode: AuthMode | null;
+  public authMode: Maybe<AuthMode>;
 
-  public session: string | null;
+  public session: Maybe<string>;
 
   constructor() {
     this.authMode = null;
@@ -22,17 +22,17 @@ export class AuthStore {
       session: observable,
 
       setAuthMode: action,
-      setSessionToken: action
+      setSessionToken: action,
     });
 
     this.session = localStorage.getItem("session") || null;
   }
 
-  public setAuthMode(authMode: AuthMode | null) {
+  public setAuthMode(authMode: Maybe<AuthMode>) {
     this.authMode = authMode;
   }
 
-  public setSessionToken(token: string | null) {
+  public setSessionToken(token: Maybe<string>) {
     this.session = token;
   }
 
@@ -44,19 +44,16 @@ export class AuthStore {
   public async login(
     username: string,
     password: string,
-  ): Promise<IAlert | null> {
+  ): Promise<Maybe<IAlert>> {
     try {
       const data = {
         username,
         password,
       };
-      const result = await RestService.post<ILogin>(
-        USER_LOGIN,
-        data
-      );
+      const result = await RestService.post<ILogin>(USER_LOGIN, data);
 
       if (result?.data.token) {
-        localStorage.setItem("session", result.data.token);        
+        localStorage.setItem("session", result.data.token);
         this.setSessionToken(result.data.token);
         return { severity: "success", message: result.data.message };
       } else {
@@ -74,17 +71,14 @@ export class AuthStore {
 
   public async register(
     username: string,
-    password: string
-  ): Promise<IAlert | null> {
+    password: string,
+  ): Promise<Maybe<IAlert>> {
     try {
       const data = {
         username,
         password,
       };
-      const result = await RestService.post<IRegister>(
-        USER_REGISTER,
-        data
-      );
+      const result = await RestService.post<IRegister>(USER_REGISTER, data);
       if (result?.data.registered) {
         return { severity: "success", message: result.data.message };
       } else {

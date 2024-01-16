@@ -6,7 +6,7 @@ import { Grid, Toolbar } from "@mui/material";
 import AvatarMenu from "../AvatarMenu/AvatarMenu";
 
 interface IHeaderProps {
-  session: string | null;
+  session: Maybe<string>;
   onLoginClick: () => void;
   onRegisterClick: () => void;
   onLogoutClick: () => void;

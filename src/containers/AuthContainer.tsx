@@ -22,7 +22,7 @@ const AuthContainer = observer(() => {
   }, []);
 
   const handleSubmitAuthForm = useCallback(
-    async (username: string, password: string): Promise<IAlert | null> => {
+    async (username: string, password: string): Promise<Maybe<IAlert>> => {
       let result;
 
       switch (authStore.authMode) {

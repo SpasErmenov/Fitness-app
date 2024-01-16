@@ -12,7 +12,7 @@ export const usernameValidationError = (username: string): boolean => {
       username.length > MAX_USERNAME_LENGTH)
   );
 };
-export const usernameValidationHelper = (username: string): string | null => {
+export const usernameValidationHelper = (username: string): Maybe<string> => {
   if (username.length > 0 && username.length < MIN_USERNAME_LENGTH) {
     return `Username must be at least ${MIN_USERNAME_LENGTH} characters`;
   }
@@ -28,7 +28,7 @@ export const passwordValidationError = (password: string): boolean => {
       password.length > MAX_PASSWORD_LENGTH)
   );
 };
-export const passwordValidationHelper = (password: string): string | null => {
+export const passwordValidationHelper = (password: string): Maybe<string> => {
   if (password.length > 0 && password.length < MIN_PASSWORD_LENGTH) {
     return `Password must be at least ${MIN_PASSWORD_LENGTH} characters`;
   }
@@ -51,8 +51,8 @@ export const passwordRepeatValidationError = (
 };
 export const passwordRepeatValidationHelper = (
   password: string,
-  passwordRepeat: string
-): string | null => {
+  passwordRepeat: string,
+): Maybe<string> => {
   if (!passwordRepeat.length) {
     return null;
   }

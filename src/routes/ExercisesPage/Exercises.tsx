@@ -1,5 +1,5 @@
 interface IExercises {
-  exercises: object | null;
+  exercises: Maybe<object>;
 }
 
 const Exercises = (props: IExercises) => {

@@ -4,7 +4,7 @@ import { IExercise } from "../../interfaces/interfaces";
 import RestService from "../AuthStore/rest.service";
 
 export class ExercisesStore {
-  public exercise: IExercise[] | null;
+  public exercise: Maybe<IExercise[]>;
 
   constructor() {
     this.exercise = null;
