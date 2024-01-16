@@ -69,7 +69,7 @@ const AuthDialog = (props: IAuthDialogProps) => {
           variant="text"
           size="small"
           onClick={props.onAuthModeChange}
-        ></Button>
+        >{formTitles.buttonName}</Button>
       </div>
       <hr className={style.Separator} />
       <DialogContent sx={{ padding: "0 24px", width: "400px" }}>
