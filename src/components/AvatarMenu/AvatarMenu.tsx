@@ -1,4 +1,4 @@
-import { settings } from "@/constants/avatar-menu.constants";
+import { AVATAR_DROPDOWN_MENU_SETTINGS } from "@/constants/avatar-menu.constants";
 import { SettingType } from "@/enums/enums";
 import {
   Avatar,
@@ -31,7 +31,7 @@ const AvatarMenu = (props: IAvatarMenuProps) => {
 
   return (
     <>
-      <Tooltip title="Open settings">
+      <Tooltip title="Open AVATAR_DROPDOWN_MENU_SETTINGS">
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           <Avatar alt="Remy Sharp" src={avatar} />
         </IconButton>
@@ -52,7 +52,7 @@ const AvatarMenu = (props: IAvatarMenuProps) => {
         open={!!anchorElUser}
         onClose={handleCloseUserMenu}
       >
-        {settings.map((setting) => (
+        {AVATAR_DROPDOWN_MENU_SETTINGS.map((setting) => (
           <MenuItem key={setting} onClick={handleCloseUserMenu(setting)}>
             <Typography textAlign="center">{setting}</Typography>
           </MenuItem>

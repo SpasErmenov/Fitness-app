@@ -1,0 +1,1 @@
+export const HEADER_BACKGOURD_COLOR = "#1f2629";
