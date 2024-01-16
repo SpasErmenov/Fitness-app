@@ -1,3 +1,5 @@
+import { settings } from "@/constants/avatar-menu.constants";
+import { SettingType } from "@/enums/enums";
 import {
   Avatar,
   IconButton,
@@ -6,32 +8,32 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
+import avatar from "../../assets/avatar-default-icon.jpg";
 
 interface IAvatarMenuProps {
   onLogoutClick: () => void;
 }
 const AvatarMenu = (props: IAvatarMenuProps) => {
   const { onLogoutClick } = props;
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = useState<Maybe<HTMLElement>>(null);
 
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseUserMenu = (setting: string) => {
+  const handleCloseUserMenu = (setting: SettingType) => () => {
     setAnchorElUser(null);
-    if (setting === "Logout") {
+    if (setting === SettingType.Logout) {
       onLogoutClick();
     }
   };
 
-  const settings = ["Profile", "Logout"];
   return (
     <>
       <Tooltip title="Open settings">
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+          <Avatar alt="Remy Sharp" src={avatar} />
         </IconButton>
       </Tooltip>
       <Menu
@@ -47,11 +49,11 @@ const AvatarMenu = (props: IAvatarMenuProps) => {
           vertical: "top",
           horizontal: "right",
         }}
-        open={Boolean(anchorElUser)}
+        open={!!anchorElUser}
         onClose={handleCloseUserMenu}
       >
         {settings.map((setting) => (
-          <MenuItem key={setting} onClick={() => handleCloseUserMenu(setting)}>
+          <MenuItem key={setting} onClick={handleCloseUserMenu(setting)}>
             <Typography textAlign="center">{setting}</Typography>
           </MenuItem>
         ))}
