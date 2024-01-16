@@ -9,10 +9,13 @@ import { AuthMode } from "../../enums/enums";
 
 export class AuthStore {
   public authMode: AuthMode | null;
+
   public session: string | null;
 
   constructor() {
     this.authMode = null;
+
+    this.session = null;
 
     makeObservable(this, {
       authMode: observable,
@@ -22,7 +25,7 @@ export class AuthStore {
       setSessionToken: action
     });
 
-    this.session = localStorage.getItem('session') || null;
+    this.session = localStorage.getItem("session") || null;
   }
 
   public setAuthMode(authMode: AuthMode | null) {
@@ -40,7 +43,7 @@ export class AuthStore {
 
   public async login(
     username: string,
-    password: string
+    password: string,
   ): Promise<IAlert | null> {
     try {
       const data = {
