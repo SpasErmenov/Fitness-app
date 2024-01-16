@@ -1,3 +1,4 @@
+// TODO Component
 interface IExercises {
   exercises: Maybe<object>;
 }
