@@ -2,7 +2,7 @@ import { Button, TextField } from "@mui/material";
 import styles from "./CreateWorkout.module.css";
 // import { useCallback } from "react";
 const CreateWorkout = () => {
-//   const handleAddExerciseButtonClick = useCallback(() => {}, []);
+  //   const handleAddExerciseButtonClick = useCallback(() => {}, []);
   return (
     <div className={styles.createWorkout}>
       <div className={styles.formFields}>

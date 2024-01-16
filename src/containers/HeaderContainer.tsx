@@ -23,7 +23,7 @@ const HeaderContainer = observer(() => {
 
   const handleExercisesClick = useCallback(() => {
     navigate("/exercises");
-  },[navigate]);
+  }, [navigate]);
 
   return (
     <>

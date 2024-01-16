@@ -26,22 +26,22 @@
 }
 
 @media (max-width: 1100px) {
-    .rateBlock {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
+  .rateBlock {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
   .container {
     gap: 150px;
   }
 }
 
 @media (max-width: 900px) {
-    .rateBlock {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-    .container {
-        gap: 50px;
-        grid-template-columns: auto;
-    }
+  .rateBlock {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .container {
+    gap: 50px;
+    grid-template-columns: auto;
+  }
 }

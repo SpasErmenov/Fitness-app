@@ -1,14 +1,14 @@
 .createWorkout {
-    display: grid;
-    justify-content: center;
-    padding-top: 65px;
-    padding-bottom: 40px;
-    background-color: #f2f2f2;
+  display: grid;
+  justify-content: center;
+  padding-top: 65px;
+  padding-bottom: 40px;
+  background-color: #f2f2f2;
 }
 .formFields {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: auto;
-    width: 200px;
-    padding-top: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto;
+  width: 200px;
+  padding-top: 30px;
 }

@@ -21,8 +21,8 @@ const RateBlock = () => {
           <p>Over 10,000 users have our app on their devices</p>
         </div>
         <div>
-        <p>Google Play Store</p>
-        <Rating
+          <p>Google Play Store</p>
+          <Rating
             sx={{
               "& .MuiRating-iconFilled": {
                 color: "black",
@@ -35,8 +35,8 @@ const RateBlock = () => {
           <p>Over 20,000 worldwide reviews</p>
         </div>
         <div>
-        <p>Web App</p>
-        <Rating
+          <p>Web App</p>
+          <Rating
             sx={{
               "& .MuiRating-iconFilled": {
                 color: "black",

@@ -17,7 +17,7 @@ const AuthContainer = observer(() => {
     authStore.setAuthMode(
       authStore.authMode === AuthMode.Register
         ? AuthMode.Login
-        : AuthMode.Register
+        : AuthMode.Register,
     );
   }, []);
 
@@ -49,7 +49,7 @@ const AuthContainer = observer(() => {
           return null;
       }
     },
-    [handleClose, navigate]
+    [handleClose, navigate],
   );
 
   return (

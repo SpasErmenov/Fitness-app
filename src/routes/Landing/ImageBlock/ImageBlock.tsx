@@ -8,8 +8,8 @@ const ImageBlock = () => {
         <h1>Lift more.</h1>
       </div>
       <p>
-        My fitness IDP for tracking your fitness progres. Please register and give it a try. I hope
-        you like it.
+        My fitness IDP for tracking your fitness progres. Please register and
+        give it a try. I hope you like it.
       </p>
     </div>
   );

@@ -12,7 +12,7 @@ class RestService {
   static async request<T>(
     url: string,
     method: string,
-    data?: object
+    data?: object,
   ): Promise<IResponse<T>> {
     const requestOptions: RequestInit = {
       method,

@@ -22,12 +22,9 @@ export class ExercisesStore {
 
   public async getExercises(): Promise<void> {
     try {
-      const result = await RestService.get<IExercise[]>(
-        EXERCISES_FETCH_ALL
-      );
+      const result = await RestService.get<IExercise[]>(EXERCISES_FETCH_ALL);
 
       this.setExercisesList(result.data);
-      
     } catch (error) {
       console.error(error);
     }

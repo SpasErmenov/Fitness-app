@@ -9,7 +9,7 @@ const Root = () => {
       <HeaderContainer />
       <AuthContainer />
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };

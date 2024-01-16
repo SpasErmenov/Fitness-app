@@ -11,10 +11,10 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route element={<Root />}>
-          <Route path="/" element={<Landing/>}/>
+          <Route path="/" element={<Landing />} />
           <Route path="/home" element={<Home />} />
           <Route path="/home/create-workout" element={<CreateWorkout />} />
-          <Route path="/exercises" element={<ExercisesPage/>}/>
+          <Route path="/exercises" element={<ExercisesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

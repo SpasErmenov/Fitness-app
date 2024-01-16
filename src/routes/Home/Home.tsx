@@ -8,7 +8,7 @@ const Home = () => {
   const onStartNewWorkoutButtonClick = useCallback(() => {
     navigate("/home/create-workout");
   }, [navigate]);
-  
+
   return (
     <div className={styles.homeBackGround}>
       <div className={styles.startNewWorkoutButton}>
