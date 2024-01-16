@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState, MouseEvent } from "react";
-import avatar from "../../assets/avatar-default-icon.jpg";
+import avatarSrc from "../../assets/avatar-default-icon.jpg";
 
 interface IAvatarMenuProps {
   onLogoutClick: () => void;
@@ -31,9 +31,9 @@ const AvatarMenu = (props: IAvatarMenuProps) => {
 
   return (
     <>
-      <Tooltip title="Open AVATAR_DROPDOWN_MENU_SETTINGS">
+      <Tooltip title="Open Settings">
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-          <Avatar alt="Remy Sharp" src={avatar} />
+          <Avatar alt="Remy Sharp" src={avatarSrc} />
         </IconButton>
       </Tooltip>
       <Menu

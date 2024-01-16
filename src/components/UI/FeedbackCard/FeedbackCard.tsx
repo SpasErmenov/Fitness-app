@@ -6,11 +6,15 @@ import {
   Typography,
 } from "@mui/material";
 import { FC } from "react";
+
 interface IFeedbackCardProps {
   name: string;
   imgPath: string;
 }
-const FeedbackCard: FC<IFeedbackCardProps> = ({ name, imgPath }) => {
+
+const FeedbackCard: FC<IFeedbackCardProps> = (props: IFeedbackCardProps) => {
+  const { name, imgPath } = props;
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
