@@ -7,7 +7,7 @@ import {
   passwordValidationHelper,
   usernameValidationError,
   usernameValidationHelper,
-} from "../formValidation.utils";
+} from "../../../validations/validation.utils";
 
 interface IRegisterFormProps {
   onSubmit: (

@@ -5,7 +5,7 @@ import {
   passwordValidationHelper,
   usernameValidationError,
   usernameValidationHelper,
-} from "../formValidation.utils";
+} from "../../../validations/validation.utils";
 
 interface ILoginFormProps {
   onSubmit: (username: string, password: string) => void;

@@ -3,7 +3,7 @@ import {
   MAX_USERNAME_LENGTH,
   MIN_PASSWORD_LENGTH,
   MIN_USERNAME_LENGTH,
-} from "../../validations/validation.constants";
+} from "../validations/validation.constants";
 
 export const usernameValidationError = (username: string): boolean => {
   return (
@@ -39,7 +39,7 @@ export const passwordValidationHelper = (password: string): Maybe<string> => {
 };
 export const passwordRepeatValidationError = (
   password: string,
-  passwordRepeat: string
+  passwordRepeat: string,
 ): boolean => {
   if (!passwordRepeat.length) {
     return false;
