@@ -1,23 +1,25 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, autorun, makeObservable, observable } from "mobx";
 import { EXERCISES_FETCH_ALL } from "../../constants/api-endpoints.constants";
 import { IExercise } from "../../interfaces/interfaces";
 import RestService from "../AuthStore/rest.service";
 
 export class ExercisesStore {
-  public exercise: IExercise[];
+  public exercises: IExercise[];
 
   constructor() {
-    this.exercise = [];
+    this.exercises = [];
 
     makeObservable(this, {
-      exercise: observable,
+      exercises: observable,
 
       setExercisesList: action,
     });
+
+    autorun(() => this.getExercises());
   }
 
-  public setExercisesList(exercise: IExercise[]) {
-    this.exercise = exercise;
+  public setExercisesList(exercises: IExercise[]) {
+    this.exercises = exercises;
   }
 
   public async getExercises(): Promise<void> {
