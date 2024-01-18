@@ -2,10 +2,10 @@ import { observer } from "mobx-react-lite";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { IAlert } from "../interfaces/interfaces";
-import { AuthMode } from "../enums/enums";
 import { authStore } from "../stores/stores";
 import AuthDialog from "../components/AuthDialog/AuthDialog";
 import { HOME_PAGE } from "@/routes/paths.constants";
+import { AuthMode } from "@/enums/enums";
 
 const AuthContainer = observer(() => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const AuthContainer = observer(() => {
   const handleSubmitAuthForm = useCallback(
     async (username: string, password: string): Promise<Maybe<IAlert>> => {
       let result;
-
+      // TODO change logic after back-end changes
       switch (authStore.authMode) {
         case AuthMode.Login:
           result = await authStore.login(username, password);
