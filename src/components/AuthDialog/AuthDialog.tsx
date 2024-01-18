@@ -23,7 +23,7 @@ interface IAuthDialogProps {
   onFormSubmit: (username: string, password: string) => Promise<Maybe<IAlert>>;
 }
 
-const AuthDialog = (props: IAuthDialogProps) => {
+export const AuthDialog = (props: IAuthDialogProps) => {
   const { authMode, open, onFormSubmit } = props;
 
   const [alertObj, setAlertObj] = useState<Maybe<IAlert>>(null);
@@ -65,11 +65,9 @@ const AuthDialog = (props: IAuthDialogProps) => {
       </div>
       <hr className={style.Separator} />
       <div className={style.DialogSubHeader}>
-        <Button
-          variant="text"
-          size="small"
-          onClick={props.onAuthModeChange}
-        >{formTitles.buttonName}</Button>
+        <Button variant="text" size="small" onClick={props.onAuthModeChange}>
+          {formTitles.buttonName}
+        </Button>
       </div>
       <hr className={style.Separator} />
       <DialogContent sx={{ padding: "0 24px", width: "400px" }}>
@@ -90,5 +88,3 @@ const AuthDialog = (props: IAuthDialogProps) => {
     </Dialog>
   );
 };
-
-export default AuthDialog;

@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { SettingType } from "@/enums/enums";
 import { AVATAR_DROPDOWN_MENU_SETTINGS } from "@/constants/avatar-menu.constants";
-import avatarSrc from "../../assets/avatar-default-icon.jpg";
+import avatarSrc from "@/assets/avatar-default-icon.jpg";
 
 interface IAvatarMenuProps {
   onLogoutClick: () => void;
