@@ -1,6 +1,6 @@
 import { IResponse } from "@/interfaces/interfaces";
 
-class RestService {
+export class RestService {
   static async get<T>(url: string, params?: object): Promise<IResponse<T>> {
     return RestService.request(url, "GET", params);
   }
@@ -32,5 +32,3 @@ class RestService {
     return result;
   }
 }
-
-export default RestService;

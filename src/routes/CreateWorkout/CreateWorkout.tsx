@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import styles from "./CreateWorkout.module.css";
 
-const CreateWorkout = () => {
+export const CreateWorkout = () => {
   return (
     <div className={styles.createWorkout}>
       <div className={styles.formFields}>
@@ -15,5 +15,3 @@ const CreateWorkout = () => {
     </div>
   );
 };
-
-export default CreateWorkout;

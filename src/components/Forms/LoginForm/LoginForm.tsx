@@ -17,7 +17,7 @@ interface ILoginFormProps {
   onSubmit: (username: string, password: string) => void;
 }
 
-const LoginForm = (props: ILoginFormProps) => {
+export const LoginForm = (props: ILoginFormProps) => {
   const { onSubmit } = props;
 
   const [username, setUsername] = useState("");
@@ -100,5 +100,3 @@ const LoginForm = (props: ILoginFormProps) => {
     </>
   );
 };
-
-export default LoginForm;

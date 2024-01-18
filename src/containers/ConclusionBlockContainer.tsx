@@ -4,7 +4,7 @@ import { ConclusionBlock } from "@/routes/Landing/ConclusionBlock/ConclusionBloc
 import { AuthMode } from "@/enums/enums";
 import { authStore } from "@/stores/stores";
 
-const ConclusionBlockContainer = observer(() => {
+export const ConclusionBlockContainer = observer(() => {
   const handleOnJoinNowClick = useCallback(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     authStore.setAuthMode(AuthMode.Register);
@@ -12,5 +12,3 @@ const ConclusionBlockContainer = observer(() => {
 
   return <ConclusionBlock onJoinNowClick={handleOnJoinNowClick} />;
 });
-
-export default ConclusionBlockContainer;

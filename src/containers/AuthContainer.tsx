@@ -7,7 +7,7 @@ import { AuthDialog } from "@/components/AuthDialog/AuthDialog";
 import { AuthMode } from "@/enums/enums";
 import { IAlert } from "@/interfaces/interfaces";
 
-const AuthContainer = observer(() => {
+export const AuthContainer = observer(() => {
   const navigate = useNavigate();
 
   const handleClose = useCallback(() => {
@@ -63,5 +63,3 @@ const AuthContainer = observer(() => {
     />
   );
 });
-
-export default AuthContainer;

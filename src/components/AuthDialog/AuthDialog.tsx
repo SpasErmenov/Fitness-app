@@ -10,8 +10,8 @@ import {
 import { useCallback, useMemo, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import style from "./AuthDialog.module.css";
-import RegisterForm from "../Forms/RegisterForm/RegisterForm";
-import LoginForm from "../Forms/LoginForm/LoginForm";
+import { RegisterForm } from "../Forms/RegisterForm/RegisterForm";
+import { LoginForm } from "../Forms/LoginForm/LoginForm";
 import { IAlert } from "@/interfaces/interfaces";
 import { AuthMode } from "@/enums/enums";
 

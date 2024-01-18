@@ -1,6 +1,6 @@
 import styles from "./ImageBlock.module.css";
 
-const ImageBlock = () => {
+export const ImageBlock = () => {
   return (
     <div className={styles.imageBlock}>
       <div className={styles.headers}>
@@ -14,5 +14,3 @@ const ImageBlock = () => {
     </div>
   );
 };
-
-export default ImageBlock;

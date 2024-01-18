@@ -23,7 +23,7 @@ interface IRegisterFormProps {
   ) => void;
 }
 
-const RegisterForm = (props: IRegisterFormProps) => {
+export const RegisterForm = (props: IRegisterFormProps) => {
   const { onSubmit } = props;
 
   const [username, setUsername] = useState<string>("");
@@ -131,5 +131,3 @@ const RegisterForm = (props: IRegisterFormProps) => {
     </>
   );
 };
-
-export default RegisterForm;

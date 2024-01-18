@@ -1,5 +1,5 @@
 import { makeObservable, observable, action } from "mobx";
-import RestService from "./rest.service";
+import { RestService } from "./rest.service";
 import { IAlert, ILogin, IRegister } from "@/interfaces/interfaces";
 import { USER_LOGIN, USER_REGISTER } from "@/constants/api-endpoints.constants";
 import { AuthMode } from "@/enums/enums";

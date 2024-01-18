@@ -5,7 +5,7 @@ interface IExercisesProps {
   exercises: IExercise[];
 }
 
-const Exercises = (props: IExercisesProps) => {
+export const Exercises = (props: IExercisesProps) => {
   const { exercises } = props;
 
   return (
@@ -17,5 +17,3 @@ const Exercises = (props: IExercisesProps) => {
     </>
   );
 };
-
-export default Exercises;

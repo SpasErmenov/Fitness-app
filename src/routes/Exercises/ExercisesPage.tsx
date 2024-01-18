@@ -1,7 +1,5 @@
-import ExercisesContainer from "@/containers/ExercisesContainer";
+import { ExercisesContainer } from "@/containers/ExercisesContainer";
 
-const ExercisesPage = () => {
+export const ExercisesPage = () => {
   return <ExercisesContainer />;
 };
-
-export default ExercisesPage;

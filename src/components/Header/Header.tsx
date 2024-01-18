@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Grid, Toolbar } from "@mui/material";
 import { GREY_2 } from "@/constants/style.constants";
-import AvatarMenu from "../AvatarMenu/AvatarMenu";
+import { AvatarMenu } from "../AvatarMenu/AvatarMenu";
 
 interface IHeaderProps {
   session: Maybe<string>;
@@ -14,7 +14,7 @@ interface IHeaderProps {
   onExercisesClick: () => void;
 }
 
-const Header = (props: IHeaderProps) => {
+export const Header = (props: IHeaderProps) => {
   const { session } = props;
 
   return (
@@ -55,5 +55,3 @@ const Header = (props: IHeaderProps) => {
     </Box>
   );
 };
-
-export default Header;

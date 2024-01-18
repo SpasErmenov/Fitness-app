@@ -14,7 +14,8 @@ import avatarSrc from "@/assets/avatar-default-icon.jpg";
 interface IAvatarMenuProps {
   onLogoutClick: () => void;
 }
-const AvatarMenu = (props: IAvatarMenuProps) => {
+
+export const AvatarMenu = (props: IAvatarMenuProps) => {
   const { onLogoutClick } = props;
   const [anchorElUser, setAnchorElUser] = useState<Maybe<HTMLElement>>(null);
 
@@ -61,5 +62,3 @@ const AvatarMenu = (props: IAvatarMenuProps) => {
     </>
   );
 };
-
-export default AvatarMenu;

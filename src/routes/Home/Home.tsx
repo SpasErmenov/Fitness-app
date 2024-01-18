@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 
-const Home = () => {
+export const Home = () => {
   const navigate = useNavigate();
   const onStartNewWorkoutButtonClick = useCallback(() => {
     navigate("/home/create-workout");
@@ -19,5 +19,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { authStore } from "@/stores/stores";
 import { AuthMode } from "@/enums/enums";
-import Header from "@/components/Header/Header";
+import { Header } from "@/components/Header/Header";
 
-const HeaderContainer = observer(() => {
+export const HeaderContainer = observer(() => {
   const { session } = authStore;
   const navigate = useNavigate();
 
@@ -35,5 +35,3 @@ const HeaderContainer = observer(() => {
     />
   );
 });
-
-export default HeaderContainer;

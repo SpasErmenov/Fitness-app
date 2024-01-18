@@ -1,7 +1,7 @@
 import { Rating } from "@mui/material";
 import styles from "./RateBlock.module.css";
 
-const RateBlock = () => {
+export const RateBlock = () => {
   return (
     <div className={styles.rateBlock}>
       <h1 className={styles.header}>We like numbers</h1>
@@ -52,4 +52,3 @@ const RateBlock = () => {
     </div>
   );
 };
-export default RateBlock;

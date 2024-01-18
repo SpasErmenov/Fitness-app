@@ -1,6 +1,6 @@
 import { usersFeedbackBlockPicture } from "@/constants/users-feedback-block-pictures";
 import styles from "./FeedbackBlock.module.css";
-import FeedbackCard from "@/components/UI/FeedbackCard/FeedbackCard";
+import { FeedbackCard } from "@/components/UI/FeedbackCard/FeedbackCard";
 
 export const FeedbackBlock = () => {
   return (

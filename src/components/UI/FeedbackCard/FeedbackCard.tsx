@@ -12,7 +12,9 @@ interface IFeedbackCardProps {
   imgPath: string;
 }
 
-const FeedbackCard: FC<IFeedbackCardProps> = (props: IFeedbackCardProps) => {
+export const FeedbackCard: FC<IFeedbackCardProps> = (
+  props: IFeedbackCardProps,
+) => {
   const { name, imgPath } = props;
 
   return (
@@ -32,4 +34,3 @@ const FeedbackCard: FC<IFeedbackCardProps> = (props: IFeedbackCardProps) => {
     </Card>
   );
 };
-export default FeedbackCard;
