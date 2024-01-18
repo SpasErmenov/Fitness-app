@@ -5,6 +5,7 @@
   padding-bottom: 70px;
   background-color: rgba(252, 203, 38, 0.85);
 }
+
 .header {
   font-family: var(--main-font);
   font-size: 3em;
@@ -12,6 +13,7 @@
   text-align: center;
   padding-bottom: 50px;
 }
+
 .container {
   display: grid;
   gap: 220px;
@@ -20,6 +22,7 @@
   font-size: 30px;
   text-align: center;
 }
+
 .container p {
   font-size: 25px;
   font-weight: 700;
@@ -30,6 +33,7 @@
     padding-left: 100px;
     padding-right: 100px;
   }
+
   .container {
     gap: 150px;
   }
@@ -40,6 +44,7 @@
     padding-left: 80px;
     padding-right: 80px;
   }
+
   .container {
     gap: 50px;
     grid-template-columns: auto;
