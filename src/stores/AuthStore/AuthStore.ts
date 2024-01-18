@@ -43,26 +43,27 @@ export class AuthStore {
     password: string,
   ): Promise<Maybe<IAlert>> {
     try {
-      const data = {
+      const payload = {
         username,
         password,
       };
-      const result = await RestService.post<ILogin>(USER_LOGIN, data);
+
+      const result = await RestService.post<ILogin>(USER_LOGIN, payload);
 
       if (result?.data.token) {
         localStorage.setItem("session", result.data.token);
         this.setSession(result.data.token);
         return { severity: "success", message: result.data.message };
-      } else {
-        return { severity: "error", message: result.data.message };
       }
+
+      return { severity: "error", message: result.data.message };
     } catch (error) {
+      // TODO fix after server changes
       if (error instanceof Error && error.message.includes("401")) {
         return { severity: "error", message: "Invalid credentials!" };
-      } else {
-        console.error(error);
-        return { severity: "error", message: "An unexpected error occurred." };
       }
+
+      return { severity: "error", message: "An unexpected error occurred." };
     }
   }
 
@@ -71,18 +72,18 @@ export class AuthStore {
     password: string,
   ): Promise<Maybe<IAlert>> {
     try {
-      const data = {
+      const payload = {
         username,
         password,
       };
-      const result = await RestService.post<IRegister>(USER_REGISTER, data);
+
+      const result = await RestService.post<IRegister>(USER_REGISTER, payload);
       if (result?.data.registered) {
         return { severity: "success", message: result.data.message };
-      } else {
-        return { severity: "error", message: result.data.message };
       }
+
+      return { severity: "error", message: result.data.message };
     } catch (error) {
-      console.error(error);
       return { severity: "error", message: "An unexpected error occurred." };
     }
   }
