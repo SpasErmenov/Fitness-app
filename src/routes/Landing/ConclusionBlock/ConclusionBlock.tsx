@@ -7,7 +7,7 @@ interface IConclusionBlockProps {
 export const ConclusionBlock = (props: IConclusionBlockProps) => {
   return (
     <div className={styles.conclusionBlock}>
-      <div className={styles.text}>
+      <div className={styles.TextContent}>
         <h1>
           Everyhing you need.
           <br />

@@ -6,20 +6,20 @@
   padding-bottom: 100px;
 }
 
-.text {
+.TextContent {
   text-align: center;
 }
 
-.text h1 {
+.TextContent h1 {
   padding-bottom: 50px;
 }
 
-.text p {
+.TextContent p {
   font-size: 28px;
   padding-bottom: 40px;
 }
 
-.text label {
+.TextContent label {
   font-size: 28px;
   cursor: pointer;
 }
