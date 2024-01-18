@@ -1,32 +1,26 @@
-.conclusionBlock {
-  background-color: #f3f3f3;
-  padding-top: 100px;
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-bottom: 100px;
-}
+@import "../../../styles/variables.css";
 
-.TextContent {
+.ConclusionBlock {
+  background-color: var(--white);
   text-align: center;
+  font-size: var(--title-fs);
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  padding: 50px 0;
 }
 
-.TextContent h1 {
-  padding-bottom: 50px;
+.ConclusionBlock__Title {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--title-lh);
 }
 
-.TextContent p {
-  font-size: 28px;
-  padding-bottom: 40px;
+.ConclusionBlock__Title,
+.ConclusionBlock__Content {
+  max-width: 80%;
 }
 
-.TextContent label {
-  font-size: 28px;
-  cursor: pointer;
-}
-
-@media (max-width: 550px) {
-  .conclusionBlock {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+.ConclusionBlock__Button {
+  text-decoration: underline;
 }
