@@ -1,6 +1,8 @@
-// TODO Component
+// TODO Component is still in progress
+import { IExercise } from "@/interfaces/interfaces";
+
 interface IExercisesProps {
-  exercises: Maybe<object>;
+  exercises: IExercise[];
 }
 
 const Exercises = (props: IExercisesProps) => {
