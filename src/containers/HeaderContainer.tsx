@@ -1,9 +1,9 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { observer } from "mobx-react-lite";
-import { authStore } from "../stores/stores";
-import { AuthMode } from "../enums/enums";
-import Header from "../components/Header/Header";
+import { authStore } from "@/stores/stores";
+import { AuthMode } from "@/enums/enums";
+import Header from "@/components/Header/Header";
 
 const HeaderContainer = observer(() => {
   const { session } = authStore;

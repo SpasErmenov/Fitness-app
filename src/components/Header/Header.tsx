@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Grid, Toolbar } from "@mui/material";
-import AvatarMenu from "../AvatarMenu/AvatarMenu";
 import { GREY_2 } from "@/constants/style.constants";
+import AvatarMenu from "../AvatarMenu/AvatarMenu";
 
 interface IHeaderProps {
   session: Maybe<string>;

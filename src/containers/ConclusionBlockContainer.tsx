@@ -1,8 +1,8 @@
 import { useCallback } from "react";
 import { observer } from "mobx-react-lite";
-import { authStore } from "../stores/stores";
-import { ConclusionBlock } from "../routes/Landing/ConclusionBlock/ConclusionBlock";
-import { AuthMode } from "../enums/enums";
+import { ConclusionBlock } from "@/routes/Landing/ConclusionBlock/ConclusionBlock";
+import { AuthMode } from "@/enums/enums";
+import { authStore } from "@/stores/stores";
 
 const ConclusionBlockContainer = observer(() => {
   const handleOnJoinNowClick = useCallback(() => {

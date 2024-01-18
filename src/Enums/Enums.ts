@@ -5,5 +5,5 @@ export enum AuthMode {
 
 export enum SettingType {
   Menu = "Menu",
-  Logout = "Logout"
+  Logout = "Logout",
 }

@@ -1,5 +1,4 @@
-import { AVATAR_DROPDOWN_MENU_SETTINGS } from "@/constants/avatar-menu.constants";
-import { SettingType } from "@/enums/enums";
+import { useState, MouseEvent } from "react";
 import {
   Avatar,
   IconButton,
@@ -8,7 +7,8 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useState, MouseEvent } from "react";
+import { SettingType } from "@/enums/enums";
+import { AVATAR_DROPDOWN_MENU_SETTINGS } from "@/constants/avatar-menu.constants";
 import avatarSrc from "../../assets/avatar-default-icon.jpg";
 
 interface IAvatarMenuProps {

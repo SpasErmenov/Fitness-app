@@ -1,11 +1,17 @@
 import { Button, DialogActions, TextField } from "@mui/material";
-import { useCallback, KeyboardEvent, useState, useMemo, ChangeEvent } from "react";
+import {
+  useCallback,
+  KeyboardEvent,
+  useState,
+  useMemo,
+  ChangeEvent,
+} from "react";
 import {
   passwordValidationError,
   passwordValidationHelper,
   usernameValidationError,
   usernameValidationHelper,
-} from "../../../validations/validation.utils";
+} from "@/validations/validation.utils";
 
 interface ILoginFormProps {
   onSubmit: (username: string, password: string) => void;
@@ -33,19 +39,23 @@ const LoginForm = (props: ILoginFormProps) => {
       }
     },
 
-    [onSubmit, username, password]
+    [onSubmit, username, password],
   );
 
   const handleUsernameChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setUsername(e.target.value);
-  },[setUsername]);
+      setUsername(e.target.value);
+    },
+    [setUsername],
+  );
 
   const handlePasswordChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setPassword(e.target.value);
-  },[setPassword]);
-  
+      setPassword(e.target.value);
+    },
+    [setPassword],
+  );
+
   const handleFormSubmit = useCallback(() => {
     onSubmit(username, password);
   }, [onSubmit, username, password]);

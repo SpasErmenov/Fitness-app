@@ -1,11 +1,8 @@
 import { makeObservable, observable, action } from "mobx";
-import {
-  USER_LOGIN,
-  USER_REGISTER,
-} from "../../constants/api-endpoints.constants";
-import { IAlert, ILogin, IRegister } from "../../interfaces/interfaces";
 import RestService from "./rest.service";
-import { AuthMode } from "../../enums/enums";
+import { IAlert, ILogin, IRegister } from "@/interfaces/interfaces";
+import { USER_LOGIN, USER_REGISTER } from "@/constants/api-endpoints.constants";
+import { AuthMode } from "@/enums/enums";
 
 export class AuthStore {
   public authMode: Maybe<AuthMode>;

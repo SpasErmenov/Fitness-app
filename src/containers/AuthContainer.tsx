@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { IAlert } from "../interfaces/interfaces";
-import { authStore } from "../stores/stores";
-import AuthDialog from "../components/AuthDialog/AuthDialog";
 import { HOME_PAGE } from "@/routes/paths.constants";
+import { authStore } from "@/stores/stores";
+import AuthDialog from "@/components/AuthDialog/AuthDialog";
 import { AuthMode } from "@/enums/enums";
+import { IAlert } from "@/interfaces/interfaces";
 
 const AuthContainer = observer(() => {
   const navigate = useNavigate();

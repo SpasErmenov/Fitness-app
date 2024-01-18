@@ -1,5 +1,11 @@
 import { Button, DialogActions, TextField } from "@mui/material";
-import { KeyboardEvent, useCallback, useMemo, useState, ChangeEvent } from "react";
+import {
+  KeyboardEvent,
+  useCallback,
+  useMemo,
+  useState,
+  ChangeEvent,
+} from "react";
 import {
   passwordRepeatValidationError,
   passwordRepeatValidationHelper,
@@ -7,13 +13,13 @@ import {
   passwordValidationHelper,
   usernameValidationError,
   usernameValidationHelper,
-} from "../../../validations/validation.utils";
+} from "@/validations/validation.utils";
 
 interface IRegisterFormProps {
   onSubmit: (
     username: string,
     password: string,
-    passwordRepeat: string
+    passwordRepeat: string,
   ) => void;
 }
 
@@ -44,24 +50,30 @@ const RegisterForm = (props: IRegisterFormProps) => {
         }
       }
     },
-    [onSubmit, username, password, passwordRepeat]
+    [onSubmit, username, password, passwordRepeat],
   );
-  
+
   const handleUsernameChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setUsername(e.target.value);
-  },[setUsername]);
+      setUsername(e.target.value);
+    },
+    [setUsername],
+  );
 
   const handlePasswordChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setPassword(e.target.value);
-  },[setPassword]);
+      setPassword(e.target.value);
+    },
+    [setPassword],
+  );
 
   const handlePasswordRepeatChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setPasswordRepeat(e.target.value);
-  },[setPasswordRepeat]);
-  
+      setPasswordRepeat(e.target.value);
+    },
+    [setPasswordRepeat],
+  );
+
   const handleFormSubmit = useCallback(() => {
     onSubmit(username, password, passwordRepeat);
   }, [onSubmit, username, password, passwordRepeat]);
