@@ -1,6 +1,11 @@
 import { makeObservable, observable, action } from "mobx";
 import { RestService } from "./rest.service";
-import { IAlert, ILogin, IRegister } from "@/interfaces/interfaces";
+import {
+  IAlert,
+  IAuthPayload,
+  ILogin,
+  IRegister,
+} from "@/interfaces/interfaces";
 import { USER_LOGIN, USER_REGISTER } from "@/constants/api-endpoints.constants";
 import { AuthMode } from "@/enums/enums";
 
@@ -48,7 +53,10 @@ export class AuthStore {
         password,
       };
 
-      const result = await RestService.post<ILogin>(USER_LOGIN, payload);
+      const result = await RestService.post<ILogin, IAuthPayload>(
+        USER_LOGIN,
+        payload,
+      );
 
       if (result?.data.token) {
         localStorage.setItem("session", result.data.token);
@@ -77,7 +85,10 @@ export class AuthStore {
         password,
       };
 
-      const result = await RestService.post<IRegister>(USER_REGISTER, payload);
+      const result = await RestService.post<IRegister, IAuthPayload>(
+        USER_REGISTER,
+        payload,
+      );
       if (result?.data.registered) {
         return { severity: "success", message: result.data.message };
       }

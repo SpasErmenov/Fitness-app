@@ -10,7 +10,7 @@ export interface IResponse<T = any> {
 }
 
 export interface ILogin {
-  token: null | string;
+  token: Maybe<string>;
   message: string;
 }
 
@@ -28,4 +28,9 @@ export interface IUsers {
   id: number;
   name: string;
   imgPath: string;
+}
+
+export interface IAuthPayload {
+  username: string;
+  password: string;
 }
