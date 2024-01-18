@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Grid, Toolbar } from "@mui/material";
 import AvatarMenu from "../AvatarMenu/AvatarMenu";
-import { HEADER_BACKGOURD_COLOR } from "@/constants/style.constants";
+import { GREY_2 } from "@/constants/style.constants";
 
 interface IHeaderProps {
   session: Maybe<string>;
@@ -19,7 +19,7 @@ const Header = (props: IHeaderProps) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute" sx={{ bgcolor: HEADER_BACKGOURD_COLOR }}>
+      <AppBar position="absolute" sx={{ bgcolor: GREY_2 }}>
         <Toolbar sx={{ justifyContent: "center" }}>
           <Grid
             container
