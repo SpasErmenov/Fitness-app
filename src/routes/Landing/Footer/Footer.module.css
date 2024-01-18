@@ -1,7 +1,7 @@
 .footer {
   background-color: #1f2629;
   color: var(--white);
-  font-family: "Inter", sans-serif;
+  font-family: var(--main-font);
   padding-top: 80px;
   padding-left: 200px;
   padding-right: 200px;

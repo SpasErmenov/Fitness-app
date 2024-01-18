@@ -5,7 +5,7 @@
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 200px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--main-font);
   text-align: center;
   background-image: linear-gradient(rgba(10, 39, 51, 0.8), rgba(0, 0, 0, 0)),
     url(../../../assets/landingBackground.jpg);

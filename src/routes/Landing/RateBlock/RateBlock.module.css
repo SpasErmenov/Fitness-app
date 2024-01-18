@@ -6,7 +6,7 @@
   background-color: rgba(252, 203, 38, 0.85);
 }
 .header {
-  font-family: "Inter", sans-serif;
+  font-family: var(--main-font);
   font-size: 3em;
   font-weight: 600;
   text-align: center;

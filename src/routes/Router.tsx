@@ -4,7 +4,7 @@ import Root from "./Root/Root";
 import Home from "./Home/Home";
 import Landing from "./Landing/Landing";
 import CreateWorkout from "./CreateWorkout/CreateWorkout";
-import ExercisesPage from "./ExercisesPage/ExercisesPage";
+import ExercisesPage from "./Exercises/ExercisesPage";
 
 export const Router = () => {
   return (
