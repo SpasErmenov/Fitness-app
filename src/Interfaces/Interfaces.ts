@@ -5,7 +5,7 @@ export interface IAlert {
   message: string;
 }
 
-export interface IResponse<T = any> {
+export interface IResponse<T = unknown> {
   data: T;
 }
 
