@@ -1,17 +1,15 @@
 .DialogHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 16px;
 }
 
 .DialogSubHeader {
-    margin-left: auto;
-    padding-right: 16px;
-
+  margin-left: auto;
+  margin-right: 16px;
 }
 
 .Separator {
-    margin: 0;
-    
+  margin: 0;
 }
