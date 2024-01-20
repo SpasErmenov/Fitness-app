@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  --white: #f2f2f2;
+  --grey1: #cccccc;
+  --grey2: #808080;
+  --black: #1f2629;
+  --gradient: linear-gradient(rgba(10, 39, 51, 0.8), rgba(0, 0, 0, 0));
+  --orange-transparent1: rgba(252, 203, 38, 0.85);
+
+  /* Fonts */
+  --main-font: "Inter", sans-serif;
+
+  /* Font sizes */
+  --big-title-fs: 50px;
+  --title-fs: 28px;
+  --small-title-fs: 20px;
+
+  /* Line heights */
+  --title-lh: 60px;
+}

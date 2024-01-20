@@ -1,0 +1,22 @@
+.FeedbackBlock {
+  background-color: var(--white);
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.FeedbackBlock__Title {
+  text-align: center;
+  color: var(--black);
+  font-size: var(--small-title-fs);
+  margin: 0 16px;
+}
+
+.FeedbackBlock__Grid {
+  display: grid;
+  margin: 0 auto;
+  place-items: center;
+  padding: 30px;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1100px;
+}

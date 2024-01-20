@@ -1,0 +1,18 @@
+.ImageBlock {
+  color: var(--white);
+  font-size: var(--big-title-fs);
+  text-align: center;
+  background-image: var(--gradient), url(@/assets/landingBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  padding: 200px 30px;
+}
+
+.ImageBlock__Title {
+  padding-bottom: 10px;
+}
+
+.ImageBlock__Content {
+  max-width: 900px;
+  margin: 0 auto;
+}

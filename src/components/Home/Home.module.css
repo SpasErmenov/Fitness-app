@@ -1,0 +1,9 @@
+.Home {
+  padding-top: 65px;
+  background-color: var(--white);
+}
+
+.Home__Button {
+  text-align: center;
+  padding: 40px 0;
+}

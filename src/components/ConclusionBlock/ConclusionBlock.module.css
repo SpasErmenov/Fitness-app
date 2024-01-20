@@ -1,0 +1,24 @@
+.ConclusionBlock {
+  background-color: var(--white);
+  text-align: center;
+  font-size: var(--title-fs);
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.ConclusionBlock__Title {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--title-lh);
+}
+
+.ConclusionBlock__Title,
+.ConclusionBlock__Content {
+  max-width: 80%;
+}
+
+.ConclusionBlock__Button {
+  text-decoration: underline;
+}

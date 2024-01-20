@@ -1,0 +1,37 @@
+.Footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 50px 30px;
+}
+
+.Footer__Grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  color: var(--grey1);
+}
+
+.Footer__Title {
+  color: var(--white);
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+
+.Footer__CopyrightText {
+  color: var(--grey2);
+  padding-top: 80px;
+  text-align: center;
+}
+
+@media (max-width: 690px) {
+  .Footer__Logo {
+    grid-column: span 4;
+  }
+  
+  .Footer__Grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
