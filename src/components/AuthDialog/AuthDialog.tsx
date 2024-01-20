@@ -46,12 +46,11 @@ export const AuthDialog = (props: IAuthDialogProps) => {
         title: AuthMode.Login,
         buttonName: AuthMode.Register,
       };
-    } else {
-      return {
-        title: AuthMode.Register,
-        buttonName: AuthMode.Login,
-      };
     }
+    return {
+      title: AuthMode.Register,
+      buttonName: AuthMode.Login,
+    };
   }, [authMode]);
 
   return (
