@@ -6,7 +6,7 @@
 
 .FeedbackBlock__Title {
   text-align: center;
-  color: var(--grey2);
+  color: var(--black);
   font-size: var(--small-title-fs);
   margin: 0 16px;
 }

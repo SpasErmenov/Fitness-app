@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Grid, Toolbar } from "@mui/material";
-import { GREY_2 } from "@/constants/style.constants";
+import { BLACK } from "@/constants/style.constants";
 import { AvatarMenu } from "../AvatarMenu/AvatarMenu";
 
 interface IHeaderProps {
@@ -19,7 +19,7 @@ export const Header = (props: IHeaderProps) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute" sx={{ bgcolor: GREY_2 }}>
+      <AppBar position="absolute" sx={{ bgcolor: BLACK }}>
         <Toolbar sx={{ justifyContent: "center" }}>
           <Grid
             container

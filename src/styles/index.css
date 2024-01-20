@@ -21,7 +21,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #1f2629;
+  background-color: var(--black);
 }
 /*
   5. Improve media defaults
