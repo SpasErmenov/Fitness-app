@@ -1,7 +1,6 @@
 .Footer {
   background-color: var(--black);
   color: var(--white);
-  font-family: var(--main-font);
   padding: 50px 30px;
 }
 
@@ -27,7 +26,7 @@
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 690px) {
   .Footer__Logo {
     grid-column: span 4;
   }

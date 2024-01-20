@@ -5,6 +5,7 @@
   --grey2: #808080;
   --black: #1f2629;
   --gradient: linear-gradient(rgba(10, 39, 51, 0.8), rgba(0, 0, 0, 0));
+  --orange-transparent1: rgba(252, 203, 38, 0.85);
 
   /* Fonts */
   --main-font: "Inter", sans-serif;

@@ -3,9 +3,9 @@ import styles from "./RateBlock.module.css";
 
 export const RateBlock = () => {
   return (
-    <div className={styles.rateBlock}>
-      <h1 className={styles.header}>We like numbers</h1>
-      <div className={styles.container}>
+    <div className={styles.RateBlock}>
+      <h1 className={styles.RateBlock__Title}>We like numbers</h1>
+      <div className={styles.RateBlock__Content}>
         <div>
           <p>App Store</p>
           <Rating
@@ -46,7 +46,7 @@ export const RateBlock = () => {
             value={5}
             readOnly
           />
-          <p>Only one developer using it at this moment)</p>
+          <p>Only one developer using it at this moment</p>
         </div>
       </div>
     </div>

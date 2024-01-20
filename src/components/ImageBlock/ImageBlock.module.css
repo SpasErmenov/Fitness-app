@@ -1,7 +1,6 @@
 .ImageBlock {
   color: var(--white);
   font-size: var(--big-title-fs);
-  font-family: var(--main-font);
   text-align: center;
   background-image: var(--gradient), url(@/assets/landingBackground.jpg);
   background-repeat: no-repeat;
