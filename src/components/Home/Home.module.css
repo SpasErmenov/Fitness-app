@@ -1,9 +1,9 @@
-.homeBackGround {
+.Home {
   padding-top: 65px;
-  background-color: #f2f2f2;
+  background-color: var(--white);
 }
-.startNewWorkoutButton {
+
+.Home__Button {
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
