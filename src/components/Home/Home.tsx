@@ -7,14 +7,14 @@ import { CREATE_WORKOUT_PAGE } from "@/routes/paths.constants";
 export const Home = () => {
   const navigate = useNavigate();
 
-  const onClick = useCallback(() => {
+  const handleClick = useCallback(() => {
     navigate(CREATE_WORKOUT_PAGE);
   }, [navigate]);
 
   return (
     <div className={styles.Home}>
       <div className={styles.Home__Button}>
-        <Button variant="contained" onClick={onClick}>
+        <Button variant="contained" onClick={handleClick}>
           Start new workout
         </Button>
       </div>
